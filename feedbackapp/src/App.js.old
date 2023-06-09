@@ -1,0 +1,47 @@
+import React from "react";
+
+const App = () => {
+  const title = "Blog Post";
+  const body = "This is my blog post";
+  const comments = [
+    { id: 1, text: "comment 1" },
+    { id: 2, text: "comment 2" },
+    { id: 3, text: "comment 3" },
+  ];
+
+  const loading = false;
+  const showComments = false;
+
+  const commentBlock = (
+    <div className="comments">
+      <h3>Comment ({comments.length})</h3>
+      <ul>
+        {comments.map((Comment, index) => (
+          <li key={index}>{Comment.text}</li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  if (loading) {
+    return <h1>loading ...</h1>;
+  }
+
+  return (
+    // <div className="container">
+    //   <h1>Hello from the App component</h1>
+    //   <p>hello!</p>
+    // </div>
+    // React.createElement("div", { className: "container" },
+    //     React.createElement("h1", {}, "My App"));
+
+    <div className="container">
+      <h1>{title.toUpperCase()}</h1>
+      <p>{body}</p>
+
+      {showComments && commentBlock}
+    </div>
+  );
+};
+
+export default App;
