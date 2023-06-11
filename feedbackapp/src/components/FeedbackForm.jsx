@@ -4,7 +4,7 @@ import Btn from "./shared/Btn";
 import RatingsSelect from "./RatingSelect";
 import FeedbackContext from "../context/FeedbackContext";
 
-const FeedbackForm = ({}) => {
+const FeedbackForm = () => {
   const { addFeedback, feedbackEdit, updateFeedback } =
     useContext(FeedbackContext);
 
