@@ -228,3 +228,7 @@ input:focus {
         width: 80%;
     }
 }
+
+.loaderIcon {
+    animation: spin 1s infinite linear;
+}
